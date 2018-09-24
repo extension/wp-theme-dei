@@ -21,8 +21,19 @@ get_header(); ?>
 
 			<?php
       $tax = get_taxonomy( get_queried_object()->taxonomy );
+      $term = get_queried_object();
+      // echo $term->name;
+
+      $parents = get_ancestors($term->term_id, 'md_addiction');
+      $parents = array_reverse($parents);
+      // print_r($parents);
+
       echo '<h1 class="archive-page-title">';
       echo $tax->labels->singular_name;
+      foreach($parents as $parent) {
+        $foo = get_term( $parent);
+        echo ' > ' . $foo->name;
+      }
       echo ":</h1><h2>";
 		  echo single_term_title();
       echo "</h2>";

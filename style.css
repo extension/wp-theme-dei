@@ -221,10 +221,9 @@ float:left;
    clear: both;
 }
 
-/* .content-wrap {outline: magenta 2px solid;} */
+.navigation-top .wrap {max-width:85%}
 #primary {width: 100%; float:left; max-width:none !important;}
 #secondary {width: 100%; float:right;}
-
 
 @media screen and (min-width: 30em) {
   .page-one-column .panel-content .wrap {
@@ -236,13 +235,13 @@ float:left;
   .content-wrap {max-width: 95%; }
   #primary {width: 75% !important;}
   #secondary {width: 22% !important;}
-  /* .single-extension_resource .content-wrap {max-width: 75%} */
-  .single-extension_resource #primary {width: 65% !important;}
-
+}
+@media screen and (min-width: 70em) {
+  .extension_resource-body {width: 50% !important; float: left; }
+  .extension_resource-terms {width: 45% !important; float: right; }
 }
 @media screen and (min-width: 90em) {
   .content-wrap {max-width: 90%; }
   #primary {width: 69% !important;}
   #secondary {width: 28% !important;}
-
 }
